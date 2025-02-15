@@ -1,0 +1,72 @@
+\documentclass[notoc,nonewpage]{xourse}
+
+\pdfOnly{\usepackage{posterPrintStyle}}
+
+
+\title{Ximera Poster Template}
+
+\author{G.D. Researcher \and Emmy Noether}
+\pdfOnly{\institution{Ohio State Univeristy \and The University of Florida}}
+\pdfOnly{\email{researcher@osu.edu \and noether.1@uf.edu}}
+\pdfOnly{\authorFontSize{\Large}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Set the poster theme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pdfOnly{\posterTheme{centralBlock}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Logos should be stored in xmPictures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pdfOnly{\leftLogo{TheOhioStateUniversityStacked.png}}  
+\pdfOnly{\rightLogo{cycleLogo.png}}       
+\pdfOnly{\deployedURL{https://ximera.org}}
+\pdfOnly{\unitTopLine{DEPARTMENT OF}}
+\pdfOnly{\unitBottomLine{MATHEMATICS}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% There are two text colors,
+%% "main" and "pop"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{mainTextColor}{RGB}{0,0,0}           %% black
+\definecolor{popTextColor}{RGB}{255,255,255}      %% white
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Only three colors are used, 
+%% two "primary" and a "pop" color
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{primaryColor}{RGB}{191,198,203}      %% Light Gray OSU
+\definecolor{primaryColorToo}{RGB}{63,68,67}      %% Dark Gray OSU
+\definecolor{popColor}{RGB}{186,12,47}            %% Scarlet OSU
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\begin{abstract}
+    This is a poster that will try to compile an HTML version. Use a _pfd.tex filename to prevent this.
+\end{abstract}
+\maketitle
+\pdfOnly{\begin{multicols*}{3}}
+        % \part{Topics}
+%\leftColumn
+\pdfOnly{\posterstyle{plainBlock}}
+\pdfOnly{\posterstyle{leftPlainBlock}}
+\activity{posterBlocks/introduction}
+\activity{posterBlocks/list}
+\pdfOnly{\posterstyle{centralBlock}}
+\activity{posterBlocks/table}
+\pdfOnly{\posterstyle{rightBasicBlock}}
+\activity{posterBlocks/math}
+\pdfOnly{\posterstyle{rightPlainBlock}}
+\activity{posterBlocks/references}
+\pdfOnly{\end{multicols*}}
+
+
+\end{document}

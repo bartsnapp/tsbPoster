@@ -1,0 +1,107 @@
+
+\usepackage{systeme}% voor mooie stelsels
+
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+
+\usepackage{wallpaper}
+
+\usepackage{makecell}
+
+\usepackage{xstring}
+
+% 
+% to make slides with tcbraster ...
+%
+\tcbuselibrary{raster}
+\tcbuselibrary{breakable,skins}
+
+%\usetikzlibrary{external}
+%\tikzexternalize
+%\tcbset{shield externalize}
+
+\tcbuselibrary{poster}
+
+\definecolor{kublue1}{rgb}{0.122, 0.671, 0.835}   % KU Leuven Blauw
+\definecolor{kublue}{rgb}{0.114, 0.553, 0.69}   % KU Leuven Blauw
+\definecolor{kuaccent}{rgb}{0.867, 0.541, 0.18}   % KU Leuven Accent
+
+\colorlet{xmred}{kuaccent!50!black}   % KU Leuven Accent
+
+\providecommand{\blue}[1]{{\color{blue}#1}}    % to be moved to preamble.tex ...
+\providecommand{\red}[1]{{\color{red}#1}}
+\renewcommand{\important}[1]{\ensuremath{\fcolorbox{kuaccent}{kuaccent!50!white}{$#1$}}}
+
+% \fboxsep=4pt    % default is 3pt; INCREASES ALL LINE-HEIGHTS with \important !!!
+
+\providecommand{\importantcell}[1]{\ensuremath{\cellcolor{lightgray}#1}}  % to be moved to preamble
+\renewcommand{\importantcell}[1]{\ensuremath{\cellcolor{kuaccent!50!white}#1}} % overwrite
+
+\renewcommand\CancelColor{\color{kuaccent!50!black}}
+
+
+\tcbposterset{
+    coverage = {
+        spread,
+        interior style = {
+          fill zoom image=sedes.png,   % from KULeuven .pptx template
+          fill image opacity=0.20,
+        },
+    },
+    poster   = {          columns=12,rows=5,  spacing=1mm,},
+%  poster   = {showframe,columns=12,rows=5,  spacing=1mm,},
+    boxes    = {
+        enhanced standard jigsaw,sharp corners=downhill,
+        arc=3mm,
+        boxrule=0.2mm,
+        colback=white,opacityback=0.75,
+        left = 1mm,     % reduce left margin
+        right = 1mm,    % perhaps not really used ...?
+        % colframe=xmblue!70,
+        colframe=xmblue!60!white,        
+        % title style={left color=black,right color=cyan},
+        %title style={color=xmblue!60},
+        title style={color=kublue},
+        fonttitle=\bfseries\large\scshape
+    }
+}
+
+\newcommand{\xmpostertitle}[2]{
+    \posterbox[
+        adjusted title = #1,
+        % title style={color=red!80!white}, 
+        title style={color=kuaccent}, 
+        coltitle=black,
+        colframe=white,
+        sharp corners=downhill,
+        height=0.7cm
+    ]{
+        name=title,column=1,below=top, #2
+    }{}
+    
+    \posterbox[
+        adjusted title = {\hfill \small KU Leuven CC BY-NC-SA 4.0, versie \yyyymmdddate\today},
+        % title style={color=red!80!white}, 
+        title style={color=white}, 
+        coltitle=black,
+        colframe=white,
+        sharp corners=downhill,
+        height=0.35cm,
+    ]{
+        name=copyright,column=9,span=4,above=bottom,yshift=0.2cm
+    }{}    
+}
+
+
+% \usepackage{expl3}
+
+% \ExplSyntaxOn
+
+% % Define a command to remove a substring
+% \NewDocumentCommand{\removeSubstring}{mm}
+%  {
+%   \tl_set:Nx \l_tmpa_tl { \tl_replace_all:Nnn #1 { #2 } { } }
+%   \l_tmpa_tl
+%  }
+
+% \ExplSyntaxOff

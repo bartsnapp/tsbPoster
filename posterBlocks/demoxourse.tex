@@ -1,0 +1,44 @@
+\documentclass[notoc,nonewpage]{xourse}
+
+\input{posterpreamble}
+
+\pdfOnly{\usepackage{../posterPrintStyle}}
+
+\pdfOnly{
+    \posterTheme{basicBlocks}
+
+    \leftLogo{TheOhioStateUniversityStacked.png}
+    \rightLogo{cycleLogo.png}
+    \deployedURL{https://ximera.org}
+    \department{MATHEMATICS}    
+}
+
+\author{G.D. Researcher \and Emmy Noether}
+\title{Xourse with a Poster}
+
+
+\begin{document}
+\begin{abstract}
+    A one-sentence description.
+\end{abstract}
+\maketitle
+
+\part{The poster}
+%{ \posterstyle
+\activity{demoPoster}
+%}
+
+\part{The individual activities}
+
+%\pdfOnly{\begin{multicols*}{3}}
+    % \part{Topics}
+%    \pdfOnly{\posterstyle}
+    \activity{introduction}
+    \activity{list}
+    \activity{table}
+    \activity{math}
+ %   \activity{references}
+%\pdfOnly{\end{multicols*}}
+
+
+\end{document}

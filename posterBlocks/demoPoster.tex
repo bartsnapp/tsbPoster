@@ -1,0 +1,40 @@
+\documentclass[notoc,nonewpage]{ximera}
+
+\input{posterpreamble}
+
+
+\author{G.D. Researcher \and Emmy Noether}
+\title{Ximera OSU Cycle Poster Template}
+
+
+\begin{document}
+\begin{abstract}
+    A one-sentence description.
+\end{abstract}
+\maketitle
+
+\providecommand{\relpath}{./}
+\providecommand{\dependsonpdf}[1]{}    % dummy command to force dependency on <this_file>_pdf.tex
+\dependsonpdf{dummy}
+
+\ifonline
+    \HCode{\Hnewline
+            <div class="image-environment image-pdf xmcheatsheet" role="img">
+                <img src="\relpath demoPoster_pdf.svg" alt="Poster">
+           </div>
+           \Hnewline}
+\else
+    \includepdf[landscape,scale=0.75,offset=2.5cm -2.5cm,pagecommand={\thispagestyle{empty}}]{demoPoster_pdf}
+\fi
+
+% \pdfOnly{%
+%     \includepdf[landscape,scale=1,offset=2.5cm -2.5cm,pagecommand={\thispagestyle{empty}}]{ximeraPoster_pdf}
+% }
+% \begin{onlineOnly}
+%     \HCode{\Hnewline
+%             <div class="image-environment image-pdf xmcheatsheet" role="img">
+%                 <img src="\relpath ximeraPoster_pdf.svg" alt="Poster">
+%            </div>
+%            \Hnewline}
+% \end{onlineOnly}
+\end{document}
